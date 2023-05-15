@@ -1,0 +1,14 @@
+{  
+    "server": "benjaminsserver.database.windows.net", 
+    "authentication": {
+        "type": "default",
+        "options": {
+            "userName": "benjamin", 
+            "password": "R0hd3h0v3d" 
+        }
+    },
+    "options": {
+        "encrypt": true,
+        "database": "Eksamens_database"
+    }
+}

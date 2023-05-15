@@ -1,0 +1,59 @@
+Header{
+    height: 10%;
+    width: 100%;
+    /*
+    background-color: rgb(196, 233, 233);
+    */
+    background-color:blueviolet;
+    display: flex;
+    justify-content: center;
+}
+#MainPage{
+    height: 650px;
+    display: flex;
+    flex-direction: row;
+}
+#RightSide{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#LeftSide{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#Headline{
+    font-size: large;
+}
+#SecondHeadline{
+    font-size: medium;
+    font-weight: bold;
+    align-self: center;
+}
+footer{
+    height: 100px;
+    box-shadow: 10px 10px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#FooterHeader{
+    font-size: small;
+    font-weight: bold;
+}
+button{
+    background-color: lawngreen;
+    border-radius: 5px;
+    border: 0;
+    width: fit-content;
+    max-width: 100px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10;   
+}
+#RightSide>form{
+    align-self: center;
+}
