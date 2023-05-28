@@ -1,0 +1,18 @@
+<div id="staevneList">
+    <% let counter = 1; while( stævner[counter] != undefined) { %>
+        <div class="staevneBox">
+            <h1><%= stævner[counter].navn %></h1>
+            <div class="staevneDescription">
+                <p><%= stævner[counter].dato %></p>
+            </div>
+            <div class="buttonBox">
+                <form action="/Resultater/<%= stævner[counter].id %>" method="get">
+                    <button type="submit">Resultater</button>
+                </form>
+                <form action="http://localhost:3000/Tilmelding/<%= stævner[counter].id %>" method="get">
+                    <button type="submit">Bliv tilmeldt</button>
+                </form>
+            </div>
+        </div>
+    <% counter +=1;} %>
+</div>

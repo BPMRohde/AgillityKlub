@@ -1,0 +1,13 @@
+<form action="/Tilmelding/tilmelding/<%= kategorier[1].staevneKategori %>" method="post" id="tilmeldingForm">
+    <input type="text" name="newContestant" placeholder="Deltagers Navn">
+    <input type="text" name="newDog" placeholder="Hundens Navn">
+    <input type="text" name="newRace" placeholder="Hundens Race">
+    <input type="text" name="newKlub" placeholder="Klub">
+    <select name="kategori" form="tilmeldingForm">
+        <option value="">Vælg en kategori</option>
+        <% let counter =1; while (kategorier[counter] != undefined) { %>
+            <option value="<%= kategorier[counter].navn %>"><%= kategorier[counter].navn %></option>
+        <% counter+=1; } %>
+    </select>
+    <button type="submit">Tilføj deltager</button>
+</form>

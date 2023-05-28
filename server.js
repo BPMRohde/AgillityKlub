@@ -1,14 +1,18 @@
 //Her henter jeg express modulet og gemmer det i variablen app
 const express = require('express');
 const app = express();
-const tilmeldingRoutes = require('./router/tilmeldingRoutes')
-const stævneRoutes = require('./router/stævneRouter')
+const tilmeldingRoutes = require('./router/tilmeldingRoutes');
+const steavneRoutes = require('./router/steavneRouter');
+const homepageRouter = require('./router/homePageRouter');
+const adminRouter = require('./router/adminRouter');
+const resultatRouter = require('./router/resultatRouter');
+const setResultRouter = require('./router/setResultsRouter');
 
-app.set('views', './view')
-app.set('view engine', 'ejs')
+app.set('views', './view');
+app.set('view engine', 'ejs');
 
 //https://stackoverflow.com/questions/5710358/how-to-access-post-form-fields-in-express
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
@@ -21,16 +25,13 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.use('/Tilmelding', tilmeldingRoutes);
-//app.use('/Stævne', stævneRoutes);
+app.use('/Staevne', steavneRoutes);
+app.use('/Admin', adminRouter);
+app.use('/Resultater', resultatRouter);
+app.use('/setResults', setResultRouter);
 
-app.get('/', (req, res) => {
-    (async () => {
-        res.render('index')
-    })();
-});
-app.get('/Stævne', (req, res) => {
-    res.render('Competition')
-})
+app.get('/', homepageRouter);
+
 const port = 3000;
 
 app.listen(port, () => {

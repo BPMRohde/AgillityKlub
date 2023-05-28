@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="/staevnePage/computerScreen.css" media="screen and (min-width: 730px)">
+        <link rel="stylesheet" href="/staevnePage/phoneScreen.css" media="screen and (max-width: 729px)">
+        <link rel="stylesheet" href="/partialsCSS/footer.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Administrer Stævne</title>
+    </head>
+    <body>
+        <header><p id="Headline">Tak Cup</p></header>
+        <div id="MainPage">
+            <div id="LeftSide">
+                <form action="/" method="get">
+                    <button type="submit">Hjem</button>
+                </form>
+            </div>
+            <div id="RightSide">
+                <p id="SecondHeadline">Pointgivning</p>
+                <form action="/Staevne/kategori/<%= kategorier[1].id %>" method="post" id="createKategori">
+                    <input type="text" name="Navn" placeholder="Sværhedsgrad">
+                    <input type="text" name="Størrelse" placeholder="Hundestørrelse">
+                   <button type="submit" id="createKategori">Opret stævnekategori</button>
+                </form>
+                <div id="staevneGitter">
+                    <% let counter=1; %><% while(kategorier[counter] != undefined) { %>
+                        <p class="staevneTekst"><%= kategorier[counter].navn %></p>
+                        <p class="staevneTekst"><%= kategorier[counter].størrelse %></p>
+                        <p class="staevneTekst">Race</p>
+                        <p class="staevneTekst">Klub</p>
+                        <form action="/Staevne/sletKategori/<%= kategorier[counter].id %>/<%= kategorier[counter].kategoriid %>" method="get">
+                            <button type="submit">Slet</button>
+                        </form>
+                    <% counter+=1; } %>
+                </div>
+            </div>
+        </div>
+        <Footer>
+            <p id="FooterHeader">Om pointgivning</p>
+        </Footer>
+        <script src="/staevnePage/script.js" type="module"></script>
+    </body>
+</html>

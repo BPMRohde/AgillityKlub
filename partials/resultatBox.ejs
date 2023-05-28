@@ -1,0 +1,18 @@
+<div id="resultatGitter">
+    <% let counter = 1; while(kategorier[counter] != undefined) { %>
+        <p class="resultatTekst"><%= kategorier[counter].navn %></p>
+        <p class="resultatTekst"><%= kategorier[counter].størrelse %></p>
+        <p class="resultatTekst">Race</p>
+        <p class="resultatTekst">Klub</p>
+        <% let counter2 = 1; while(deltagere[counter2] != undefined) { %>
+            <% if (deltagere[counter2].staevneid == kategorier[counter].id) { %>
+                <p class="resultatTekst"><%= deltagere[counter2].navn %></p>
+                <p class="resultatTekst"><%= deltagere[counter2].hund %></p>
+                <p class="resultatTekst"><%= deltagere[counter2].race %></p>
+                <p class="resultatTekst"><%= deltagere[counter2].klub %></p>
+            <% } %>
+        <% counter2+=1; } %>
+    <% counter+=1; } %>
+
+    
+</div>

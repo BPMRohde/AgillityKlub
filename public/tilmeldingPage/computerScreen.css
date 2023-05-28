@@ -6,19 +6,19 @@ Header{
     justify-content: center;
 }
 #MainPage{
-    height: 650px;
+    min-height: 550px;
     display: flex;
     flex-direction: row;
 }
 #RightSide{
     height: 100%;
-    width: 50%;
+    width: 85%;
     display: flex;
     flex-direction: column;
 }
 #LeftSide{
     height: 100%;
-    width: 50%;
+    width: 15%;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -30,14 +30,6 @@ Header{
     font-size: large;
     font-weight: bold;
     align-self: center;
-}
-footer{
-    height: 100px;
-    box-shadow: 10px 10px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#FooterHeader{
-    font-size: medium;
-    font-weight: bold;
 }
 button{
     background-color: lawngreen;
@@ -54,4 +46,30 @@ form{
 }
 #RightSide>form{
     align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#staevneGitter{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.staevneTekst{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+#contestantGitter{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
+#tilmeldingForm{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

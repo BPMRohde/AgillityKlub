@@ -1,0 +1,17 @@
+Header{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(196, 233, 233);
+    display: flex;
+    align-items: center;
+}
+#Headline{
+    font-size: xx-large;
+}
+button{
+    background-color: lawngreen;
+    border-radius: 5px;
+    border: 0;
+    width: fit-content;
+    max-width: 100px;
+}

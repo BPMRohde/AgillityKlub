@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/adminPage/computerScreen.css" media="screen and (min-width: 730px)">
+    <link rel="stylesheet" href="/partialsCSS/footer.css">
+    <title>Stævner</title>
+</head>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <form action="/Admin/staevne" method="post" id="opretStævne">
+            <input type="text" name="navn" placeholder="navn">
+            <input type="date" name="dato" id="">
+            <button type="submit">Opret stævne</button>
+        </form>
+        <div id="staevner">
+            <% let counter = 1; while (stævner[counter] != undefined) { %>
+                <div class="staevneBox">
+                    <h2><%= stævner[counter].navn %></h2>
+                    <form action="/Staevne/<%= stævner[counter].id %>" method="get">
+                        <button type="submit">Rediger Stævne</button>
+                    </form>
+                    <form action="/setResults/<%= stævner[counter].id %>" method="get">
+                        <button type="submit">Angiv Resultater</button>
+                    </form>
+                    <form action="/Admin/<%= stævner[counter].id %>" method="get">
+                        <button type="submit">Slet stævne</button>
+                    </form>
+                </div>
+            <% counter +=1; } %>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

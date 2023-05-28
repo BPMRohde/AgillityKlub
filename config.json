@@ -9,6 +9,6 @@
     },
     "options": {
         "encrypt": true,
-        "database": "Eksamens_database"
+        "database": "benjaminsdb"
     }
 }

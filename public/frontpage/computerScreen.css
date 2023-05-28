@@ -1,0 +1,47 @@
+Header{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(196, 233, 233);
+    display: flex;
+    align-items: center;
+}
+#MainPage{
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+}
+#RightSide{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+#LeftSide{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#Headline{
+    font-size: xx-large;
+}
+#SecondHeadline{
+    font-size: large;
+    font-weight: bold;
+    align-self: center;
+}
+button{
+    background-color: lawngreen;
+    border-radius: 5px;
+    border: 0;
+    width: fit-content;
+    max-width: 100px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10;
+    width: 50%;
+}
+

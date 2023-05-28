@@ -1,0 +1,78 @@
+Header{
+    height: 10%;
+    width: 100%;
+    background-color: rgb(196, 233, 233);
+    display: flex;
+    justify-content: center;
+}
+#MainPage{
+    min-height: 550px;
+    display: flex;
+    flex-direction: row;
+}
+#RightSide{
+    height: 100%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+}
+#LeftSide{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+#Headline{
+    font-size: xx-large;
+}
+#SecondHeadline{
+    font-size: large;
+    font-weight: bold;
+    align-self: center;
+}
+button{
+    background-color: lawngreen;
+    border-radius: 5px;
+    border: 0;
+    width: fit-content;
+    max-width: 100px;
+}
+#createKategori{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10;
+    width: 50%;
+}
+#staevneGitter{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+.staevneTekst{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+#contestantGitter{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
+.opretDeltager{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.opretDeltager>button{
+    justify-self: center;
+}
+form{
+    border-left: 1px solid black;
+    align-self: center;
+}

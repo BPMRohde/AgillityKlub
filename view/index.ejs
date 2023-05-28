@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="/computerScreen.css" media="screen and (min-width: 730px)">
-        <link rel="stylesheet" href="/phoneScreen.css" media="screen and (max-width: 729px)">
+        <link rel="stylesheet" href="/frontpage/computerScreen.css" media="screen and (min-width: 730px)">
+        <link rel="stylesheet" href="/frontpage/phoneScreen.css" media="screen and (max-width: 729px)">
+        <link rel="stylesheet" href="/partialsCSS/staevneBox.css">
+        <link rel="stylesheet" href="/partialsCSS/footer.css">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Agility tilmelding</title>
     </head>
     <body>
-        <header><p id="Headline">Velkommen til Agility Klubben</p></header>
+        <%- include('../partials/header.ejs') %>
         <div id="MainPage">
             <div id="LeftSide">
                 <Form>
                     <button type="submit">Se kommende begivenheder</button>
                 </Form>
-                <Form action="http://localhost:3000/Stævne" method="get">
+                <Form action="http://localhost:3000/Admin" method="get">
                     <button type="submit">Administrer stævne</button>
                 </Form>
-
+                <Form action="http://localhost:3000/Tilmelding" method="get">
+                    <button type="submit">Tilmeld til stævne</button>
+                </Form>
             </div>
             <div id="RightSide">
-                <p id="SecondHeadline">Tilmeld dig til stævne her</p>
-                <form action="http://localhost:3000/Tilmelding" method="post">
-                    <input type="text" name="Ejer" id="Ejer" placeholder="Ejers navn">
-                    <input type="text" name="Hund" id="Hund" placeholder="Hunds navn">
-                    <input type="email" placeholder="Email">
-                    <input type="date" name="" id="">
-                    <select name="" id="">
-                        <option value="">Blandet</option>
-                        <option value="">Terier</option>
-                        <option value="">Fransk bulldog</option>
-                        <option value="">Andet</option>
-                    </select>
-                    <ul>
-                        <li>Bulldog <input type="radio" name=""></li>
-                        <li>Fench bulldog <input type="radio" name=""></li>
-                        <li>Dansk svensk gårdhund <input type="radio" name=""></li>
-                        <li>Ronja <input type="radio" name=""></li>
-                    </ul>
-                    <input type="checkbox" name="" id="">
-                    
-                    <button type="submit" >Tilmeld</button>
-                </form>
+                <%- include('../partials/staevneBox.ejs') %>
             </div>
         </div>
-        <Footer>
-            <p id="FooterHeader">Om klubben</p>
-        </Footer>
-        
+        <%- include('../partials/footer.ejs') %>
     </body>
 </html>
