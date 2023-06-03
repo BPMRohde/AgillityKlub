@@ -1,14 +1,13 @@
 {
   "name": "agility-klub",
   "version": "1.0.0",
-  "description": "",
+  "description": "Velkommen til Taastrup agillity klub",
   "main": "server.js",
+  "repository": "https://github.com/BPMRohde/AgillityKlub",
   "scripts": {
-    "hmr": "nodemon index.js",
-    "nodemon": "npm run hmr",
-    "start": "node server.js"
+       "start": "node server.js"
   },
-  "author": "",
+  "author": "Benjamin Peter Maagaard Rohde",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
