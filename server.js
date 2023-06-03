@@ -32,7 +32,7 @@ app.use('/setResults', setResultRouter);
 
 app.get('/', homepageRouter);
 
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.listen(port, () => {
     console.log(`My first server is running on port ${port}`);

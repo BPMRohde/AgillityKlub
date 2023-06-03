@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/2bc979d8-203f-4bec-b4c5-534daf23784f/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/takstaevne",
+    "appService.deploySubpath": "."
+}
